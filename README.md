@@ -1,6 +1,6 @@
 # Queue
 
-#### Tasks
+### Tasks
 **Repository**
 - [x] create new repository
 - [x] create new maven project
@@ -35,5 +35,5 @@
 
 
 **Authors**\
-Elisabeth Wadler
+Elisabeth Wadler\
 Tabea-Maria Stremayr
