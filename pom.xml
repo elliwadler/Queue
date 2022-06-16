@@ -8,6 +8,28 @@
     <artifactId>Queue</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>Elisabeth</id>
+            <name>Elisabeth Wadler</name>
+            <email>elisabeth.wadler@edu.fh-joanneum.at</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <repositories>
+        <repository>
+            <id>Queue</id>
+            <url>https://github.com/elliwadler/Queue.git</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

@@ -15,8 +15,8 @@
 - [ ] git push
 
 **Code**
-- [ ] add new branch and correct 3 mistakes in the code
-- [ ] git push
+- [x] add new branch and correct 3 mistakes in the code
+- [x] git push
 
 **New implementation**
 - [ ] integrate Drinks Interface and add new implementing class

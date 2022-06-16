@@ -16,7 +16,8 @@ public class StringQueue implements IQueue {
   private int maxSize = 5;
 
   public StringQueue(int maxsize) {
-    maxSize = maxSize;
+    //1st Error - variable 'maxSize' typing error
+    maxSize = maxsize;
   }
 
   @Override
@@ -33,7 +34,8 @@ public class StringQueue implements IQueue {
   public String poll() {
     String element = peek();
 
-    if (elements.size() == 0) {
+    //2nd Error - '==' makes no sense
+    if (elements.size() != 0) {
       elements.remove(0);
     }
 
@@ -43,7 +45,7 @@ public class StringQueue implements IQueue {
   @Override
   public String remove() {
     String element = poll();
-    element = "";
+    //3rd Error - 'element = ""';
     if (element == null)
       throw new NoSuchElementException("there's no element any more");
 
@@ -71,3 +73,4 @@ public class StringQueue implements IQueue {
   }
 
 }
+
