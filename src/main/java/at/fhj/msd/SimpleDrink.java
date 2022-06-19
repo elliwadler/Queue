@@ -3,11 +3,11 @@ package at.fhj.msd;
  * Class represents a simple drink liquid which can be used in
  * drinks
  */
-public class SimpleDrink extends at.fhj.iit.Drink {
+public class SimpleDrink extends at.fhj.msd.Drink {
     /**
      * uses only one liquid
      */
-    protected at.fhj.iit.Liquid l;
+    protected at.fhj.msd.Liquid l;
     /**
      * Creates a SimpleDrink object with given age and
      * liquid
@@ -15,7 +15,7 @@ public class SimpleDrink extends at.fhj.iit.Drink {
      * @param name name of drink
      * @param l only liquid in drink
      */
-    SimpleDrink(String name, at.fhj.iit.Liquid l){
+    SimpleDrink(String name, at.fhj.msd.Liquid l){
         super(name);
         this.l = l;
     }
