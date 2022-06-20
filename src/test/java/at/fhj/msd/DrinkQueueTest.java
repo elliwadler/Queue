@@ -13,27 +13,44 @@ public class DrinkQueueTest {
     public void setup(){
         simpleDrink = new SimpleDrink("Test", new Liquid("TestLiquid",0.5,12));
         drinkQueue = new DrinkQueue(1);
-        drinkQueue2 = new DrinkQueue(0);
     }
+
+    /**
+     * Add new Drink to queue
+     * @result drink will be added and true returned
+     */
     @Test
     public void drinkQueueTest1(){
         Assertions.assertEquals(true, drinkQueue.offer(simpleDrink));
     }
+
+    /**
+     * Add new Drink to full queue
+     * @result drink will not be added and false returned
+     */
     @Test
     public void drinkQueueTest2(){
-        Assertions.assertEquals(false, drinkQueue2.offer(simpleDrink));
+        drinkQueue.offer(simpleDrink);
+        Assertions.assertEquals(false, drinkQueue.offer(simpleDrink));
     }
+
+    /**
+     * Delete drink from queue
+     * @result drink will be deleted and returned
+     */
     @Test
     public void drinkQueueTest3(){
         Assertions.assertEquals(drinkQueue.peek(), drinkQueue.poll());
     }
-    @Test
-    public void drinkQueueTest4(){
-        Assertions.assertEquals(drinkQueue2.peek(), drinkQueue2.poll());
-    }
+
+    /**
+     * Delete drink from empty queue
+     * @result null will be returned
+     */
     @Test
     public void drinkQueueTest5(){
-        Assertions.assertEquals(null, drinkQueue2.poll());
+        drinkQueue.poll();
+        Assertions.assertEquals(null, drinkQueue.poll());
     }
 
 }

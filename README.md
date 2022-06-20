@@ -10,20 +10,20 @@
 - [x] git push
 
 **pom.xml**
-- [ ] add developer information
-- [ ] add git repository link
-- [ ] git push
+- [x] add developer information
+- [x] add git repository link
+- [x] git push
 
 **Code**
 - [x] add new branch and correct 3 mistakes in the code
 - [x] git push
 
 **New implementation**
-- [ ] integrate Drinks Interface and add new implementing class
-- [ ] new version of Queue to enable the administration of Drinks in a Queue
-- [ ] every Member has to implement the same number of methods of the interface, in a new branch (every member has its own Branch)
-- [ ] JavaDoc comments for all classes + new ones
-- [ ] git push
+- [x] integrate Drinks Interface and add new implementing class
+- [x] new version of Queue to enable the administration of Drinks in a Queue
+- [x] every Member has to implement the same number of methods of the interface, in a new branch (every member has its own Branch)
+- [x] JavaDoc comments for all classes + new ones
+- [x] git push
 
 **Tests**
 - [ ] 100% test coverage
