@@ -26,12 +26,12 @@
 - [x] git push
 
 **Tests**
-- [ ] 100% test coverage
-- [ ] new test file for testing the new Drinks version (with a class you choose) - 100% test coverage
-- [ ] JavaDoc comments on which aspect is how tested
-- [ ] every member has to do tests, in one shared branch
-- [ ] mvn test has to be without exceptions/mistakes
-- [ ] git push
+- [x] 100% test coverage
+- [x] new test file for testing the new Drinks version (with a class you choose) - 100% test coverage
+- [x] JavaDoc comments on which aspect is how tested
+- [x] every member has to do tests, in one shared branch
+- [x] mvn test has to be without exceptions/mistakes
+- [x] git push
 
 
 **Authors**\
