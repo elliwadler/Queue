@@ -9,7 +9,6 @@ import java.util.NoSuchElementException;
 public class DrinkQueueTest {
     private SimpleDrink simpleDrink;
     private DrinkQueue drinkQueue;
-    private DrinkQueue drinkQueue2;
 
     @BeforeEach
     public void setup(){
@@ -103,7 +102,7 @@ public class DrinkQueueTest {
     }
 
     /**
-     * fetch element from emtpy queue
+     * fetch element from empty queue
      * @result no element in queue, so exception will be returned
      */
     @Test
