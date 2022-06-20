@@ -9,16 +9,40 @@ public class DrinkQueue implements IDrinkQueue{
     private List<Drink> elements = new ArrayList<>();
     private int maxSize = 5;
 
-    @Override
-    public boolean offer(Drink obj)
-    {
-        return false;
+    public DrinkQueue(int maxsize) {
+        maxSize = maxsize;
     }
 
+    /**
+     * adds Element to queue
+     *
+     * @param obj
+     * @return true if element can be added to queue, false if queue is full
+     */
     @Override
-    public Drink poll()
-    {
-        return null;
+    public boolean offer(Drink obj) {
+        if (elements.size() != maxSize)
+            elements.add(obj);
+        else
+            return false;
+
+        return true;
+    }
+
+    /**
+     * delete first Element in queue
+     *
+     * @return element if deletion was successful, otherwise null
+     */
+    @Override
+    public Drink poll() {
+        Drink element = peek();
+
+        if (elements.size() != 0) {
+            elements.remove(0);
+        }
+
+        return element;
     }
 
     @Override
