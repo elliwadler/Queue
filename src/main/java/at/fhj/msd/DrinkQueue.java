@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+/**
+ * Class represents a queue of Drink objects
+ */
 public class DrinkQueue implements IDrinkQueue{
 
     private List<Drink> elements = new ArrayList<>();
@@ -45,6 +48,11 @@ public class DrinkQueue implements IDrinkQueue{
         return element;
     }
 
+    /**
+     * delete first Element in queue
+     *
+     * @return element if deletion was successful, otherwise Exception
+     */
     @Override
     public Drink remove()
     {
@@ -55,6 +63,11 @@ public class DrinkQueue implements IDrinkQueue{
         return element;
     }
 
+    /**
+     * get first element
+     *
+     * @return first element in queue, if queue empty null
+     */
     @Override
     public Drink peek()
     {
@@ -67,6 +80,11 @@ public class DrinkQueue implements IDrinkQueue{
         return element;
     }
 
+    /**
+     * get first element
+     *
+     * @return first element in queue, if queue empty throw Exception
+     */
     @Override
     public Drink element()
     {
