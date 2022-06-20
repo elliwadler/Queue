@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 public class DrinkQueueTest {
     private SimpleDrink simpleDrink;
     private DrinkQueue drinkQueue;
@@ -20,8 +22,8 @@ public class DrinkQueueTest {
      * @result drink will be added and true returned
      */
     @Test
-    public void drinkQueueTest1(){
-        Assertions.assertEquals(true, drinkQueue.offer(simpleDrink));
+    public void addElementToEmptyQueue(){
+        Assertions.assertTrue(drinkQueue.offer(simpleDrink));
     }
 
     /**
@@ -29,28 +31,95 @@ public class DrinkQueueTest {
      * @result drink will not be added and false returned
      */
     @Test
-    public void drinkQueueTest2(){
+    public void addElementToFullQueue(){
         drinkQueue.offer(simpleDrink);
-        Assertions.assertEquals(false, drinkQueue.offer(simpleDrink));
+        Assertions.assertFalse(drinkQueue.offer(simpleDrink));
     }
 
     /**
-     * Delete drink from queue
-     * @result drink will be deleted and returned
+     * Fetch drink from empty queue
+     * @result null is returned, queue is empty
      */
     @Test
-    public void drinkQueueTest3(){
-        Assertions.assertEquals(drinkQueue.peek(), drinkQueue.poll());
+    public void peekIsNullForEmptyQueue(){
+        Assertions.assertNull(drinkQueue.peek());
     }
 
     /**
      * Delete drink from empty queue
-     * @result null will be returned
+     * @result nothing will happen, null is returned
      */
     @Test
-    public void drinkQueueTest5(){
-        drinkQueue.poll();
-        Assertions.assertEquals(null, drinkQueue.poll());
+    public void pollIsNullForEmptyQueue(){
+        Assertions.assertNull(drinkQueue.peek());
     }
 
+    /**
+     * Delete drink from queue
+     * @result element will be removed and returned
+     */
+    @Test
+    public void pollFetchedCorrectElement(){
+        drinkQueue.offer(simpleDrink);
+        Drink pollResult = drinkQueue.poll();
+
+        Assertions.assertEquals(simpleDrink, pollResult);
+    }
+
+    /**
+     * Delete drink from empty queue
+     * @result nothing will happen, null is returned
+     */
+    @Test
+    public void removeFromEmptyQueue(){
+        Assertions.assertThrowsExactly(NoSuchElementException.class, () -> drinkQueue.remove());
+    }
+
+    /**
+     * Delete drink from queue
+     * @result element will be removed and returned
+     */
+    @Test
+    public void removeElementFromQueue(){
+        drinkQueue.offer(simpleDrink);
+        Drink pollResult = drinkQueue.remove();
+
+        Assertions.assertEquals(simpleDrink, pollResult);
+    }
+
+    /**
+     * Fetch drink from queue
+     * @result element will stay in queue and will be returned
+     */
+    @Test
+    public void peekFetchCorrectElement()
+    {
+        drinkQueue.offer(simpleDrink);
+        Drink peekResult1 = drinkQueue.peek();
+        Drink peekResult2 = drinkQueue.peek();
+
+        Assertions.assertEquals(simpleDrink, peekResult1);
+        Assertions.assertEquals(peekResult1, peekResult2);
+    }
+
+    /**
+     * fetch element from emtpy queue
+     * @result no element in queue, so exception will be returned
+     */
+    @Test
+    public void getElementFromEmptyQueue(){
+        Assertions.assertThrowsExactly(NoSuchElementException.class, () -> drinkQueue.element());
+    }
+
+    /**
+     * Fetch element from queue
+     * @result element will be fetched and returned
+     */
+    @Test
+    public void getElementFromQueue(){
+        drinkQueue.offer(simpleDrink);
+        Drink pollResult = drinkQueue.element();
+
+        Assertions.assertEquals(simpleDrink, pollResult);
+    }
 }
