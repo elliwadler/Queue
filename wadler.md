@@ -5,6 +5,6 @@
 - 3 Fehler suchen und korrigieren
 - Drink Interface und dazugehörige Klassen importieren
 - einige Drink-Queue Methoden implementieren kommentieren 
-- Tests für die Methoden implementieren
+- Tests für die Methoden in DrinkQueue implementieren
 - site documentation hinzufügen
 - Contribution markdown erstellen

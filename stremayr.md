@@ -1,0 +1,11 @@
+#Contribution - Stremayr
+- Create README.md
+- add developer-information of myself
+- add new IDrinkQueue-Interface
+- comment classes
+- implement methods from the DrinkQueue in separate branch and comment them
+- implement tests from the DrinkQueue in separate branch and comment them
+- implement tests from the StringQueue in separate branch and comment them
+- 100% test coverage
+- extend pom.xml in order for `mvn test` to execute without errors
+- create contribution markdown file
